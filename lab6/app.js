@@ -9,23 +9,19 @@ app.set("views", path.join(__dirname, "/views/hbs"));
 //set view engine (template engine)
 app.set("view engine", "hbs");
 
-//render ra trang home (index.hbs)
-//get: get method
+//render page (get: get method)
 app.get("/", (req, res) => {
   let name = "Greenwich University";
   let address = "2 Pham Van Bach";
-  let city = "Hanoi";
-  res.render("index", { n: name, a: address, c: city });
+  res.render("index", { n: name, a: address });
 });
 
 app.get("/city", (req, res) => {
   //let country = "Vietnam";
   let cities = ["Hanoi", "HCM City", "Da Nang", "Can Tho"];
-  let providers = ["FPT", "Viettel", "VNPT"];
   res.render("city", {
     country: "Vietnam",
     cities: cities,
-    providers: providers,
   });
 });
 
