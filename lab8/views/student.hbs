@@ -1,18 +1,26 @@
-<table class="table table-bordered">
-  <tr>
-    <th>Name</th>
-    <th>Age</th>
-    <th>Email</th>
-    <th>Image</th>
-  </tr>
-  {{#each students}}
+<div class="container col-md-8 text-center mt-3">
+  <table class="table table-bordered">
     <tr>
-      <td>{{this.name}}</td>
-      <td>{{age}}</td>
-      <td>{{email}}</td>
-      <td>
-        <img src="{{image}}" width="100" height="100" />
-      </td>
+      <th colspan="3">Student List</th>
+      <th>
+        <a class="btn btn-primary" href="/add">Add</a>
+      </th>
     </tr>
-  {{/each}}
-</table>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Email</th>
+      <th>Image</th>
+    </tr>
+    {{#each students}}
+      <tr>
+        <td>{{this.name}}</td>
+        <td>{{age}}</td>
+        <td>{{email}}</td>
+        <td>
+          <img src="{{image}}" width="100" height="100" />
+        </td>
+      </tr>
+    {{/each}}
+  </table>
+</div>
