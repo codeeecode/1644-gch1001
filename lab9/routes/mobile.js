@@ -36,4 +36,13 @@ router.get("/detail/:id", (req, res) => {
   });
 });
 
+router.get("/delete/:id", (req, res) => {
+  MobileModel.findByIdAndDelete(req.params.id, (err) => {
+    if (!err) {
+      console.log("Delete mobile succeed !")
+      res.redirect("/mobile")
+    }
+  })
+})
+
 module.exports = router;
