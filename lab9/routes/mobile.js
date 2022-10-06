@@ -24,4 +24,16 @@ router.post("/add", (req, res) => {
   });
 });
 
+router.get("/detail/:id", (req, res) => {
+  //lấy giá trị id của document gửi từ url
+  var mobile_id = req.params.id;
+  //tìm kiếm document trong collection theo id
+  MobileModel.findById(mobile_id, (err, data) => {
+    if (!err) {
+      //render ra file detail chứa dữ liệu của document
+      res.render("mobile/detail", { mobile: data });
+    }
+  });
+});
+
 module.exports = router;
