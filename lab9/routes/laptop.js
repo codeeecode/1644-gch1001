@@ -1,8 +1,8 @@
-var express = require("express");
-var router = express.Router();
+const express = require("express");
+const router = express.Router();
 
 router.get("/", (req, res) => {
-  var name = "Greenwich University";
+  var name = "Laptop Router";
   res.render("index", { data: name });
 });
 
