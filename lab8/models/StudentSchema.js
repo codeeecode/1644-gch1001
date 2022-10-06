@@ -5,8 +5,11 @@ var StudentSchema = mongoose.Schema({
   age: Number,
   email: String,
   image: String,
+  address: String,
+  //Note: các thuộc tính "name", "email" ,.. là các cột trong bảng
 });
 
-var studentModel = mongoose.model("student", StudentSchema, "student");
+var studentModel = mongoose.model("Sinh Vien", StudentSchema, "student");
+//Note: "student" là tên của bảng (collection)
 
 module.exports = studentModel;
