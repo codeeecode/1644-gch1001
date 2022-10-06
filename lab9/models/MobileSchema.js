@@ -7,6 +7,9 @@ var MobileSchema = schema({
   brand: String,
   image: String,
   price: Number,
+}, 
+{
+  versionKey: false
 });
 
 var MobileModel = model("Điện thoại", MobileSchema, "mobile");
