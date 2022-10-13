@@ -3,6 +3,11 @@
 </div>
 
 <script>
+  let url = "https://gch1001-api.herokuapp.com/student/api"
+  fetch(url)
+    .then(response => response.json())
+    .then(data => renderTable(data))
+
   function renderTable(data) {
     var table = `<table class="table table-bordered">
                   <tr>
@@ -15,7 +20,6 @@
                       <th>Student grade</th>
                       <th>Student image</th>
                   </tr>`;
-
     data.forEach((row) => {
       table += `<tr>
                     <td>${row.name}</td>
@@ -29,7 +33,6 @@
     });
 
     table += `</table>`;
-
     document.querySelector(".container").innerHTML = table;
   }
 </script>
