@@ -2,14 +2,7 @@
   {{!-- api data will be displayed here --}}
 </div>
 
-getAPI()
-function getAPI () {
-  fetch('https://gch1001-api.herokuapp.com/student/api')
-    .then(response => response.json())
-    .then(data => (document.body.innerHTML = JSON.stringify(data)))
-}
-</script>
-=======
+<script>
   function renderTable(data) {
     var table = `<table class="table table-bordered">
                   <tr>
@@ -34,9 +27,9 @@ function getAPI () {
                     </td>
                 </tr>`;
     });
-    
+
     table += `</table>`;
 
     document.querySelector(".container").innerHTML = table;
   }
-  </script>
+</script>
